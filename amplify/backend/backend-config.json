@@ -1,4 +1,10 @@
 {
+  "analytics": {
+    "ampauth": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
+    }
+  },
   "auth": {
     "ampauthc435eca2": {
       "customAuth": false,
