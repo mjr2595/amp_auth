@@ -1,3 +1,4 @@
+import 'package:amp_auth/screens/budget_entry.dart';
 import 'package:amplify_api/amplify_api.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_authenticator/amplify_authenticator.dart';
@@ -44,6 +45,13 @@ class MyApp extends StatelessWidget {
         path: '/',
         builder: (context, state) => const HomeScreen(),
       ),
+      GoRoute(
+        path: '/manage-budget-entry',
+        name: 'manage',
+        builder: (context, state) => ManageBudgetEntryScreen(
+          budgetEntry: state.extra as BudgetEntry?,
+        ),
+      )
     ],
   );
 

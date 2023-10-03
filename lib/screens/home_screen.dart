@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../models/ModelProvider.dart';
 
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _navigateToBudgetEntry({BudgetEntry? budgetEntry}) async {
-    // To be filled in
+    await context.pushNamed('manage', extra: budgetEntry);
   }
 
   double _calculateTotalBudget(List<BudgetEntry?> items) {
